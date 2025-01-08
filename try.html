@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         
+.fourth {
+    padding-top: 80px; /* Top padding for the section */
+    height: 1800px;
+}
+
+.fourth-content {
+    display: flex;
+    flex-direction: row; /* Row layout for larger screens */
+    align-items: center; /* Center align items vertically */
+}
+
+.fourth-content .feedback {
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    color: #10AC84;
+    font-weight: 100;
+    margin-left: 70px; /* Left margin for larger screens */
+    font-size: 20px; /* Font size for feedback */
+    margin-right: 80px; /* Right margin for larger screens */
+}
+
+.merge3 {
+    font-size: 55px; /* Large font size for headings */
+}
+
+.said {
+    font-size: 55px; /* Font size for subheading */
+}
+
+.Btn3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align button */
+    margin-top: 20px; /* Margin above button */
+    margin-left: 160px; /* Left margin for button */
+}
+
+.Btn3 .btn-feedback {
+    background-color: #10AC84; /* Button color */
+    color: white; /* Text color */
+    font-size: 25px; /* Font size */
+    width: 250px; /* Button width */
+    height: 70px; /* Button height */
+    border-radius: 5px; /* Rounded corners */
+    align-content: center; /* Center content */
+    font-weight: 800; /* Font weight */
+    border: none; /* Remove border */
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    gap: 30px;
+
+}
+.col{
+    box-sizing: border-box;
+    width: 320px;
+    height: auto;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: justify;
+        
+}
+.box{
+    padding: 40px;
+    background-color:  #d9d9d9;
+    margin-left: 20px;
+    border-top: 7px solid #10AC84;
+    border-radius: 10px;   
+}
+.box i{
+    font-size: 20px;
+    font-weight: 540;
+   
+}
+.name{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+.group .ceo{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: -10px;
+}
+ .group .ceo img{
+    margin-left: 20px; /* Space between icon and text */
+    height: 35px;
+    width: auto;     
+}
+.boxbox{
+  padding: 40px;
+  background-color:  rgb(228, 226, 226);
+  margin:30px 0 0 0;
+  border-top: 7px solid #10AC84;
+  border-radius: 10px;
+  width: 1200px;
+  height: 450px;
+}
+.Review{
+  margin:150px 0 0 0;
+  margin-left: 100px;
+}
+.Review h4{
+  font-size: 35px;
+}
+
+.input-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field{
+  width: 48.5%;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  outline-offset: -3px;
+}
+input{
+  height: 50px; /* Adjust height as needed */
+  margin-bottom: 20px;
+}
+textarea {
+  height: 190px; /* Adjust height as needed */
+}
+.boxbox button{
+  height: 50px; 
+  width: 25%; 
+  margin-top: 20px;
+  color: white; 
+  background-color: #10AC84;
+  border: none;
+  border-radius: 6px;
+
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .fourth {
+      padding-top: 40px; /* Reduced padding for smaller screens */
+      height: auto; /* Adjust height to fit content */
+  }
+
+  .fourth-content {
+      flex-direction: column; /* Stack the elements vertically on smaller screens */
+      align-items: flex-start; /* Align to the left for better spacing */
+      margin-left: 20px; /* Add some margin */
+  }
+
+  .fourth-content .feedback {
+      margin-left: 0; /* Remove left margin on smaller screens */
+      margin-right: 0; /* Remove right margin */
+      font-size: 18px; /* Reduce font size */
+      text-align: center; /* Center text */
+  }
+
+  .merge3 {
+      font-size: 40px; /* Reduce heading font size */
+      text-align: center; /* Center align */
+  }
+
+  .said {
+      font-size: 30px; /* Reduce subheading font size */
+      text-align: center; /* Center align */
+  }
+
+  .Btn3 {
+      margin-left: 0; /* Remove left margin */
+      justify-content: center; /* Center the button */
+  }
+
+  .Btn3 .btn-feedback {
+      font-size: 20px; /* Reduce font size */
+      width: 200px; /* Adjust button width */
+      height: 60px; /* Adjust button height */
+  }
+
+  .row {
+      margin-top: 40px; /* Adjust margin */
+  }
+
+  .col {
+      width: 100%; /* Make columns take up full width */
+      margin-right: 0; /* Remove right margin */
+      margin-left: 0; /* Remove left margin */
+      margin-bottom: 20px; /* Add margin between items */
+      text-align: center; /* Center text inside columns */
+  }
+
+  .box {
+      padding: 20px; /* Reduce padding */
+      margin-left: 0; /* Remove left margin */
+      border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .box i {
+      font-size: 16px; /* Reduce icon font size */
+  }
+
+  .name {
+      font-size: 18px; /* Reduce font size */
+  }
+
+  .group .ceo {
+      font-size: 16px; /* Reduce font size */
+      margin-top: -5px; /* Adjust margin */
+  }
+
+  .group .ceo img {
+      height: 30px; /* Smaller image size */
+  }
+
+  .boxbox {
+      width: 100%; /* Make box take up full width */
+      height: auto; /* Adjust height */
+      padding: 30px; /* Reduced padding */
+      margin-top: 20px; /* Add margin top */
+  }
+
+  .Review h4 {
+      font-size: 28px; /* Reduce heading font size */
+  }
+
+  .input-box {
+      flex-direction: column; /* Stack input fields vertically */
+  }
+
+  .input-field {
+      width: 100%; /* Make input fields full width */
+      margin-bottom: 10px; /* Add space between inputs */
+  }
+
+  .input-field input,
+  .input-field textarea {
+      padding: 12px; /* Increase padding for easier input on mobile */
+  }
+
+  .boxbox button {
+      width: 100%; /* Make button full width */
+      height: 50px; /* Adjust height */
+      margin-top: 20px; /* Add margin */
+  }
+}
+
+/* Further adjustments for very small screens (mobile) */
+@media (max-width: 480px) {
+  .fourth {
+      padding-top: 20px; /* Further reduce padding */
+  }
+
+  .merge3 {
+      font-size: 32px; /* Reduce font size even more */
+  }
+
+  .said {
+      font-size: 24px; /* Reduce font size */
+  }
+
+  .Btn3 .btn-feedback {
+      font-size: 18px; /* Reduce font size */
+      width: 180px; /* Adjust width */
+      height: 50px; /* Adjust height */
+  }
+
+  .row {
+      margin-top: 30px; /* Adjust margin */
+  }
+
+  .box {
+      padding: 15px; /* Reduce padding */
+      margin-left: 0; /* Remove left margin */
+      height: auto;
+      
+  }
+
+  .box i {
+      font-size: 11px; /* Reduce icon font size */
+      text-align: justify;
+  }
+
+  .name {
+      font-size: 13px; /* Reduce font size */
+      margin-bottom: 10px;
+      text-align: left;
+  }
+
+  .group .ceo {
+      font-size: 12px; /* Reduce font size */
+      text-align: left;
+  }
+
+  .box img{
+    margin-left: 50px;
+  }
+  .boxbox {
+      padding: 20px; /* Reduce padding */
+      margin-top: 10px; /* Reduce margin */
+  }
+
+  .Review h4 {
+      font-size: 22px; /* Reduce heading font size */
+  }
+
+  .input-box {
+      flex-direction: column; /* Ensure the inputs are stacked */
+  }
+
+  .input-field input,
+  .input-field textarea {
+      padding: 14px; /* Adjust padding */
+  }
+
+  .boxbox button {
+      width: 100%; /* Make button full width */
+      height: 50px; /* Adjust button height */
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+  .col{
+    width: 40%;
+  }
+  .fourth{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .Review{
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 20px;
+  }
+}
+
+
+    </style>
+
+<div class="row">
+    <div class="col">
+        <div class="box">
+          <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+            <div class="name">ROSE</div>
+            <div class="group">
+                <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+            </div>  
+        </div>                    
+    </div>
+    <div class="col">
+        <div class="box">
+          <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+            <div class="name">DAIS</div>
+            <div class="group">
+                <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+            </div>  
+        </div>    
+    </div>
+    <div class="col">
+        <div class="box">
+          <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+            <div class="name">DA</div>
+            <div class="group">
+                <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+            </div>  
+        </div>    
+    </div>
+
+<div class="col">
+    <div class="box">
+      <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+        <div class="name">JANE</div>
+        <div class="group">
+            <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+        </div>  
+    </div>                    
+</div>
+<div class="col">
+    <div class="box">
+      <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+        <div class="name">ROMMEL</div>
+        <div class="group">
+            <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+        </div>  
+    </div>    
+</div>
+<div class="col">
+    <div class="box">
+      <i>“We've been working with this company for over five years, and their reliability and quality have never wavered. They're truly a trusted partner in our business.”</i>
+        <div class="name">DARYL</div>
+        <div class="group">
+            <div class="ceo">CEO | FOUNDER<img src="../images/quotation.png" alt="Quotation" ></div>
+        </div>  
+    </div>    
+</div>
+</div>
+</body>
+</html>

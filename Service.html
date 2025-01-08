@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="../css/Service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../script.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <img src="../images/hauler.png" alt="Logo" class="logo">
+    <nav>
+        <div class="nav-container">
+            <ul class="navlinks">
+                <li class="items"><a href="../html/homepage.html">Home</a></li>
+                <li class="items">
+                    <a href="../html/Service.html" onclick="toggleDropdown(event, 'dropdownServices')">Services</a>
+                </li>
+                <li class="items">
+                    <a href="#" onclick="toggleDropdown(event, 'dropdownPage')">Page</a>
+                    <img style="margin-bottom: -5px; margin-left: 2px;" width="20px" height="20px" src="../images/down.png" alt="" onclick="toggleDropdown(event, 'dropdownPage')">
+                    <ul class="dropdown" id="dropdownPage">
+                        <li><a href="../html/Feedback.html">Feedback</a></li>
+                        <li><a href="../html/Team.html">Our Team</a></li>
+                        <li><a href="../html/FAQ.html">FAQs</a></li>
+                    </ul>
+                </li>
+                <li class="items"><a href="../html/AboutUs.html">About Us</a></li>
+                <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+         <a href="../html/ContactUs.html"><button class="contact-button"><img src="../images/call.png" alt="call"><span class="contact">Contact Us</span></button></a>
+        </div>
+        <ul class="sidebar">
+            <li onclick="closeSidebar()" style="margin-top: 10px;"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+            <li><a href="./homepage.html">Home</a></li>
+            <li><a href="./Service.html">Services</a></li>
+            <li><a href="../html/Feedback.html">Feedback</a></li>
+            <li><a href="../html/Team.html">Our Team</a></li>
+            <li><a href="../html/FAQ.html">FAQs</a></li>
+            <li><a href="../html/AboutUs.html">About Us</a></li>
+            <li>  <a href="../html/ContactUs.html"><button class="contact-button"><img src="../images/call.png" alt="call"><span class="contact">Contact Us</span></button></a></li> <!-- Changed to list item -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="background">
+        
+        <div class="title">
+            <div class="merge-title1">
+                <span class="title-2" style="color: white; ">Service</span>
+                <span class="title-3" style="color:#10AC84;"> </span>
+            </div> 
+            <div class="merge-title2">
+                <span class="title-4" style="color: #10AC84; ">Home</span>
+                <span class="title-5" style="color:white;"> / Service</span>
+            </div> 
+        </div>
+    </div>
+
+    <section class="Second">
+      <div class="Second-content">
+        <div class="titles">
+          <h2 class="title1">OUR  SERVICES</h2> 
+              <div class="main">        
+                <span class="competitive">Competitive  &amp; </span>
+                <div class="fast-for">
+                  <span style="color: #10AC84;" class="fast">Fast Services </span>
+                  <span class="for">For You</span>
+                </div>
+            </div>   
+            <span class="lor">We are committed to delivering affordable solutions without compromising on quality or speed. Our team works quickly to meet your needs and ensure timely results. You can count on us for efficient service and great value, every time.</span>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel-inner">
+              <!-- Image 1 -->
+              <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden checked="checked">
+              <div class="carousel-item">
+                  <img src="../images/3.jpg" alt="Image 1">
+              </div>
+      
+              <!-- Image 2 -->
+              <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden>
+              <div class="carousel-item">
+                  <img src="../images/gravell.jpg" alt="Image 2">
+              </div>
+      
+              <!-- Image 3 -->
+              <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden>
+              <div class="carousel-item">
+                  <img src="../images/rock.jpg" alt="Image 3">
+              </div>
+      
+              <!-- Image 4 -->
+              <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden>
+              <div class="carousel-item">
+                  <img src="../images/soil.jpg" alt="Image 4">
+              </div>
+      
+              <!-- Image 5 -->
+              <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden>
+              <div class="carousel-item">
+                  <img src="../images/sand.webp" alt="Image 5">
+              </div>
+      
+              <!-- Image 6 -->
+              <input class="carousel-open" type="radio" id="carousel-6" name="carousel" aria-hidden="true" hidden>
+              <div class="carousel-item">
+                  <img src="../images/rocks.jpg" alt="Image 6">
+              </div>
+      
+              <!-- Controls (Prev/Next) -->
+              <label for="carousel-6" class="carousel-control prev control-1">‹</label>
+              <label for="carousel-5" class="carousel-control next control-1">›</label>
+      
+              <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+              <label for="carousel-6" class="carousel-control next control-2">›</label>
+      
+              <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+              <label for="carousel-1" class="carousel-control next control-3">›</label>
+      
+              <label for="carousel-3" class="carousel-control prev control-4">‹</label>
+              <label for="carousel-2" class="carousel-control next control-4">›</label>
+      
+              <label for="carousel-4" class="carousel-control prev control-5">‹</label>
+              <label for="carousel-3" class="carousel-control next control-5">›</label>
+      
+              <label for="carousel-5" class="carousel-control prev control-6">‹</label>
+              <label for="carousel-4" class="carousel-control next control-6">›</label>
+      
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                  <li><label for="carousel-1" class="carousel-bullet">•</label></li>
+                  <li><label for="carousel-2" class="carousel-bullet">•</label></li>
+                  <li><label for="carousel-3" class="carousel-bullet">•</label></li>
+                  <li><label for="carousel-4" class="carousel-bullet">•</label></li>
+                  <li><label for="carousel-5" class="carousel-bullet">•</label></li>
+                  <li><label for="carousel-6" class="carousel-bullet">•</label></li>
+              </ol>
+          </div>
+      </div>
+      
+      </div>
+    </section>
+
+
+    <div class="content_box" style="background: url('../images/bg3.jpg') no-repeat center center; ">
+      <div class="list">
+          <div class="container">
+              <div class="flex_col5">
+                  <img class="truck1" src="../images/truck1.png" alt="Truck 1" />
+                  <div class="Row"> 
+                      <span class="Totall" id="truckCount">Loading...</span>
+                      <i class="fa-solid fa-plus fa-2xl"></i>
+                  </div>                     
+                  <h3 class="Title">Total Trucks</h3>
+              </div>
+              <div class="line"></div>
+          </div>
+  
+          <div class="container">
+              <div class="flex_col5">
+                  <img class="truck2" src="../images/truck2.png" alt="Truck 2" />
+                  <div class="Row">
+                      <span class="Availablee">Loading...</span>
+                      <i class="fa-solid fa-plus fa-2xl"></i>
+                  </div>
+                  <h4 class="Title">Truck Available</h4>
+              </div>
+              <div class="line"></div>
+          </div>
+  
+          <div class="container">
+              <div class="flex_col5">   
+                 <div class="truck3"><img src="../images/truck3.png" alt="Truck 3" /></div> 
+                  <div class="Row">
+                      <span class="Transitt">Loading...</span>
+                      <i class="fa-solid fa-plus fa-2xl"></i>
+                  </div>                      
+                  <h4 class="Title">Truck In Transit</h4>
+              </div>
+              <div class="line"></div>
+          </div>
+  
+          <div class="container">
+            <div class="flex_col5">   
+             <div class="task"> <img src="../images/task.png" alt="Task" /></div>
+              <div class="Row">
+                <span class="Completee">Loading...</span>
+                <i class="fa-solid fa-plus fa-2xl"></i>
+              </div>                      
+              <h4 class="Title">Complete Task</h4>
+            </div>
+            <div class="line"></div>
+          </div>    
+      </div>
+  </div>  
+   
+  
+    <div class="four">
+      <div class="row3">
+        <div class="box">
+          <div class="content-box">
+            <div class="column10">
+              <div class="image3" ><img  src="../images/employ.png" alt="alt text" /></div> 
+              <h3 class="yee">Employee</h3>
+            </div>
+            <h3 class="def">Efficient, safe, and precise aggregate delivery builds the future, one load at a time.</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content-box">
+            <div class="column10">
+              <div class="image3" ><img src="../images/aggre.png" alt="alt text" /></div> 
+              <h3 class="yee">Aggregate</h3>
+            </div>
+            <h3 class="def">Key materials like sand, gravel, and stone that form the foundation of construction.</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content-box">
+            <div class="column10">
+              <div class="image3" ><img  src="../images/housing.png" alt="alt text" /></div>
+              <h3 class="yee">Warehousing</h3>
+            </div>
+            <h3 class="def"> A storage facility for goods, ensuring efficient inventory management and distribution.</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content-box">
+            <div class="column10">
+              <div class="image3" ><img src="../images/truck.png" alt="alt text" /></div>
+              <h3 class="yee">Truck</h3>
+            </div>
+            <h3 class="def">A vehicle designed for transporting goods, ensuring timely and reliable delivery.</h3>
+          </div>
+        </div>
+      </div>
+   </div> 
+
+
+   <div class="second">
+    <div class="first-img">
+        <img src="../images/like.png" alt="like">
+    </div>
+    <div class="second-content">
+        <div class="choose-us">
+          <h4>
+            WHY WE CHOOSE US
+          </h4>
+        </div>
+        <div class="merge2">
+            <span class="text2" style="color: black; ">We</span>
+            <span class="text3" style="color:#10AC84;">Export & Import</span>
+        </div> 
+        <div class="goods" style="color: black;">
+            <span>Goods All Over The Philippines</span> 
+        </div>
+        <div class="des2">
+            <p class="description2" style="color: black;" >At the heart of our business is a simple promise: to help you grow your presence across the Philippines. 
+                "We Export & Import Goods All Over The Philippines" means we have the expertise and network to move your products efficiently, no matter where you're located.
+                Whether you're reaching new customers or expanding into new regions, we ensure smooth and reliable logistics every step of the way.</p>
+            <p class="description3" style="color: black;"  ><br>From Luzon to Mindanao, we connect markets and ensure smooth trade operations across all regions. By choosing us, 
+                you're partnering with a reliable expert dedicated to growing your business throughout the Philippines.</p>
+        </div>
+        
+    </div>
+</div>
+    
+    
+
+<footer class="footer">
+  <div class="leftColumn">
+    <div class="footer-left">
+      <img class="footerlogo" alt="text" src="../images/hauler.png"/>
+      <p class="footerlorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis vitae sem non bibendum. Aliquam a auctor ante. Sed euismod gravida sagittis.</p>
+    </div>
+    <div class="f-i-t_image">
+      <i class="fa-brands fa-facebook-f fa-2xl" style="color: white;"></i>
+      <i class="fa-brands fa-instagram fa-2xl" style="color: white;"></i>
+      <i class="fa-brands fa-twitter fa-2xl" style="color: white;"></i>
+    </div>
+  </div>
+  
+  <div class="middleColumn">
+    <p class="support">Our Support</p>
+    <div class="serviceItem">
+      <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+      <a href=""><p class="serviceText">Services</p></a>
+    </div>
+    <div class="faqItem">
+      <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+      <a href="../html/FAQ.html"><p class="faqText">FAQs</p></a>
+    </div>
+    <div class="contactItem">
+      <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+      <a href="../html/ContactUs.html"><p class="contactText">Contact</p></a>
+    </div>
+    <div class="termsItem">
+      <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+      <a href="../html/Term&Con.html"><p class="termsText">Term & Conditions</p></a>
+    </div>
+    <div class="privacyItem">
+      <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+      <a href="../html/Privacy.html"><p class="privacyText">Privacy Policy</p></a>
+    </div>
+  </div>
+  
+  <div class="rightColumn">
+    <p class="contactTitle">Contact #</p>
+    <div class="addressBlock">
+      <img alt="h" class="addressIcon" src="../images/address.png" />
+      <div class="addressDetails">
+        <h3 class="addressLabel" style="color: white;">Address</h3>
+        <p class="addressText">
+          99 Roving St., Big City,
+          <br />
+          BGC 234565
+        </p>
+      </div>
+    </div>
+    <div class="phoneBlock">
+      <img class="phoneIcon" alt="text" src="../images/phone.png" />
+      <div class="phoneDetails">
+        <h3 class="phoneLabel" style="color: white;">Phone Number</h3>
+        <p class="phoneNumber">123-234-1234</p>
+      </div>
+    </div>
+    <div class="emailBlock">
+      <img class="emailIcon" alt="text" src="../images/mail.png"/>
+      <div class="emailDetails">
+        <h3 class="emailLabel" style="color: white;">Email Address</h3>
+        <p class="emailAddress">haulerhorizon@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/script.js" > </script>
+</body>
+</html>

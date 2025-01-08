@@ -1,0 +1,1709 @@
+* {  
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    height: 105px;
+    width: auto;
+    cursor: pointer;
+}
+
+li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+header {
+    background-color: #10AC84;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.navlinks li {
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+}
+
+.navlinks li a {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.navlinks li a:hover {
+    color: #19282F;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.dropdown {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px;
+    width: 140px;
+    box-shadow: black;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navlinks li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown li {
+    margin: 5px;
+}
+
+.dropdown li a {
+    color: rgb(0, 0, 0);
+    transition: color 0.3s, background-color 0.3s;
+    font-size: 15px;
+}
+
+.dropdown li a:hover {
+    color: #ffffff;
+    background-color: #19282F;
+}
+
+.contact-button {
+    margin: 30px;
+    padding: 12px 20px;
+    background-color: #19282F;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button img{
+    margin-right: 20px;
+    height: 35px;
+    width: auto;
+}
+
+.contact-button:hover {
+    background-color: #155A6E;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10px); /* Fallback for Safari */
+    backdrop-filter: blur(10px);
+    box-shadow: -3px 0 10px black;
+    display: none;
+    justify-content: flex-start;
+    list-style: none;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.sidebar li {
+    width: 100%;
+    margin: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+
+nav ion-icon {
+    font-size: 2.9em;
+    position: absolute;
+    top: -9px;
+    right: 0.1px;
+}
+nav ion-icon:hover {
+    background-color: #10AC84;
+    transition: ease-in;
+}
+
+
+@media only screen and (min-width: 830px) {
+
+    .navlinks ion-icon {
+        display: none;
+    }
+  
+    .contact-button .contact{
+        align-items: center;
+        justify-content: center; 
+        text-align: center;   
+    }
+  
+    .contact-button img {
+        height: 25px; /* Adjust image size */
+        
+    }
+  }
+  
+  @media only screen and (max-width: 830px) {
+    .navlinks .items {
+        display: none;
+    }
+    .contact-button {
+        display: block; /* Ensure it shows on small screens */
+    }
+    .contact-button {
+        display: none ; /* Ensure it shows on small screens */
+    }
+    .sidebar .contact-button {
+      margin: 30px;
+      padding: 12px 20px;
+      background-color: #19282F;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: -10px;
+      margin-top: 90px;
+    
+    }
+  }
+
+
+
+.background-container {
+    position: relative;
+    width: 100%; /* Changed to 100% for mobile */
+    height: 800px;
+    overflow: hidden;
+}
+
+.background-container {
+    height: 750px; /* Ensure height is specified correctly */
+    position: relative;
+    width: 100%; /* Changed to 100% for mobile */
+    overflow: hidden;
+    background: url('../images/bg1.png') no-repeat center center; /* Ensuring the background image is set properly */
+    background-size: cover; /* Cover to maintain aspect ratio */
+    position: relative; /* Allow children to position relative to this */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: 2; /* Ensure it sits above the background image */
+}
+
+
+.title-header {
+    font-size: 100px;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.title-header .title {
+    margin-top: 60px;
+    margin-left: 80px;
+    font-weight: 550;
+}
+
+.merge-title {
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: -40px;
+}
+
+.merge-title .title-2 {
+    font-size: 120px;
+}
+
+
+.des .description{   
+    text-align: justify;
+    margin-right: 500px;
+    
+}
+
+.description {
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.Btn {
+    margin-left: 150px;
+    margin-top: 20px; 
+}
+
+.Btn .btn-1, .Btn .btn-2 {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px solid #10AC84;
+    width: 260px;
+    height: 65px;
+    font-size: 20px;
+
+}
+
+.Btn .btn-1:hover, .Btn .btn-2:hover {
+    background-color: #10AC84;
+    color: #092229;
+}
+
+.img-container {
+    margin-left: 100px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container img {
+    width: 90px; /* Ensure all images are the same width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 70px;
+}
+
+.title-container {
+    margin-left: 80px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.title-container a {
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .title-header {
+        font-size: 40px; /* Smaller font size for mobile */
+    }
+    .title-header .title {
+        margin-left: 20px; /* Adjust margins for smaller screens */
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .merge-title .title-2 {
+        font-size: 45px; /* Smaller title size */
+        margin-right: 20px;
+
+    }
+    .merge-title .title-3 {
+        font-size: 40px; /* Smaller title size */
+       margin-left: 10px;
+       margin-top: 2px;
+    }   
+    .merge-title{
+        display: flex;
+        flex-direction: row; /* Stack buttons vertically */
+        margin-left: 10px;
+    }
+    .des .description{   
+        text-align: justify;
+        margin-right: 30px;
+        
+    }
+    .description {
+        margin-left: 30px; /* Adjust margin */
+        font-size: 16px; /* Smaller font size */
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+    .Btn {
+        display: flex; /* Use Flexbox */
+        flex-direction: row; /* Stack buttons vertically */
+        align-items: center; /* Center align the buttons */
+        margin-left: 17px; /* Reset left margin */
+        margin-top: 50px; /* Adjust top margin for spacing */
+        justify-content: space-evenly;
+        
+    }
+
+    .Btn .btn-1, .Btn .btn-2 {
+        width: 100%; /* Make buttons full width */
+        max-width: 150px; /* Set a maximum width for buttons */
+        margin: 10px 0; /* Add vertical spacing between buttons */
+        font-size: 16px; /* Smaller font size */
+        margin-right: 20px;
+        height: 50px;
+        min-width: 140px;
+        justify-content: space-between;
+       
+    }
+    .img-container {
+        margin-left: 0; /* Adjust margin */
+        display: flex;
+        flex-wrap: wrap; /* Allow images to wrap */
+        justify-content: center; /* Center images */
+        margin-top: 30px;
+    }
+    .img-container img {
+        width: 50px; /* Smaller image size */
+        margin-right: 30px; /* Adjust spacing */
+        margin-left: 10px;
+    }
+  
+    .title-container {   
+        margin-top: 5px; /* Adjust margin */
+        display: flex; /* Use Flexbox */
+        flex-direction: row; /* Stack buttons vertically */
+        align-items: center; /* Center align the buttons */
+        text-align: center;
+        margin-left: 50px;
+       
+    }
+    .title-container a{
+        font-size: 0.8rem;
+        margin-left: -10px; /* Adjust margin */
+    }
+
+    .background-container {
+        position: relative;
+        width: 100%; /* Changed to 100% for mobile */
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+.first-img img {
+    width: auto;
+    height: 500px; /* Keep original height */
+}
+
+.second {
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+}
+
+.second-content {
+    flex: 1; /* Allow the content to grow */
+}
+
+.second-content .choose-us {
+    margin-left: 80px;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    color: #10AC84;
+    font-weight: 100;
+    text-align: left;
+}
+
+.second-content .merge2, 
+.second-content .goods {
+    margin-left: 80px;
+    font-size: 65px;
+}
+
+.des2 {
+    margin-left: 80px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .first-img img {
+        display: none;
+    }
+
+    .second {
+        margin-top: 30px;
+        padding: 20px; /* Reduced padding for mobile */
+        flex-direction: column; /* Stack vertically on mobile */
+    }
+
+    .second-content .choose-us,
+    .second-content .merge2,
+    .second-content .goods{
+        text-align: center;
+        margin-left: 0;
+       
+    }
+    .des2 {
+        margin-left: 0; /* Reset margin for mobile */
+        text-align: justify; /* Center text */
+        justify-content: center;
+    }
+
+    .second-content .merge2,
+    .second-content .goods {
+        font-size: 40px; /* Adjust font size for mobile */
+    }
+
+    .des2 {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .Btn2 .btn-3 {
+        width: 90%; /* Make button responsive */
+        max-width: 500px; /* Limit width */
+        margin: 20px auto; /* Center button */
+        height: 60px; /* Adjust height */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .Btn2 .btn-3 img {
+        height: 25px; /* Adjust image size */
+    }
+}
+.third {
+    display: flex;
+    flex-direction: row; /* Row layout for larger screens */
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+}
+
+.da {
+    flex: 0 0 auto; /* Prevent the image container from shrinking */
+}
+
+.da img {
+    width: 100%; /* Make image responsive */
+    max-width: 500px; /* Limit max width for larger screens */
+    height: 90%; /* Maintain aspect ratio */
+    padding-top: 150px; /* Adjust top padding */
+    padding-right: 70px; /* Right padding for larger screens */
+}
+
+.third-content {
+    margin-right: 50px; /* Right margin for larger screens */
+    padding-top: 100px; /* Top padding for larger screens */
+    flex: 1; /* Allow content to take available space */
+}
+
+.third-content .about-us {  
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    color: #10AC84;
+    font-weight: 100;
+    margin-left: 70px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.third-content .merge3, 
+.third-content .more {   
+    font-size: 65px; /* Large font size for headings */
+    margin-left: 70px;
+}
+
+.des3 {
+    margin-left: 70px;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+.Btn2 {
+    margin-left: 150px; /* Left margin for larger screens */
+    margin-top: 20px; /* Top margin for buttons */
+    display: flex;
+    flex-direction: row; /* Row layout for buttons */
+}
+
+.Btn2 .btn-contact, .Btn2 .btn-team {
+    background-color: transparent;
+    border-radius: 13px;
+    border: 2px solid #10AC84;
+    width: 260px;
+    height: 65px;
+    font-size: 20px;
+    color: #10AC84;
+    margin-right: 20px; /* Space between buttons */
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Center button */
+}
+
+.Btn2 .btn-contact img {
+    margin-right: 20px; /* Space between icon and text */
+    height: 35px;
+    width: auto;
+}
+
+.Btn2 .btn-team{
+    background-color: transparent;
+    border-radius: 13px;
+    border: 2px solid #10AC84;
+    width: 260px;
+    height: 65px;
+    font-size: 20px;
+    color: #092229;
+    margin-left: 70px;
+}
+
+.Btn2 .btn-contact:hover {
+    background-color: #10AC84;
+    color: #092229;
+    border: none;
+}
+
+.Btn2 .btn-team:hover {
+    background-color: #092229;
+    color: #10AC84;
+    border: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .third {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align content */
+        padding: 20px; /* Add padding around the section */
+        
+    }
+
+    .da {
+        width: 100%; /* Full width for the image container */
+        display: flex; /* Center the image */
+        justify-content: center; /* Center align image horizontally */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .da img {
+        display: none;
+
+    }
+
+    .third-content {
+        margin-right: 0; /* Remove right margin */
+        padding-top: 20px; /* Adjust padding */
+        text-align: center; /* Center align text */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .third-content .merge3, 
+    .third-content .more {
+        margin-left: 0; /* Remove left margin */
+        font-size: 30px; /* Adjust heading size for mobile */
+        margin-top: -5px;
+    }
+
+    .third-content .about-us{
+        margin-bottom: 10px;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+        margin-left: 0;
+        
+    }
+
+    .des3 {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .Btn2 {
+        margin-left: 0; /* Remove left margin */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        width: 100%; /* Make buttons full width */
+        margin-top: 20px; /* Space above buttons */
+        text-align: center;
+    }
+
+    .Btn2 .btn-team{
+        margin-left: 2px;
+    }
+
+}
+
+
+/**/
+.content_box {
+    display: flex;
+    flex-direction: column;
+    margin: 161px 0 84px;
+    width: 100%;
+    background: url('../images/bg3.jpg') center center / 100% 100% no-repeat;
+    position: relative;
+  }
+  
+  .content_box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 23, 32, 0.5);
+    z-index: 2;
+  }
+  
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+    margin: 40px auto 50px;
+    width: 82.5%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 auto;
+    width: 250px;
+    z-index: 2;
+  }
+  
+  .flex_col5 {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+  }
+  
+  .truck1,
+  .truck2 {
+    z-index: 1;
+    width: 100px;
+    color: #10AC84;
+    text-align: center;
+    height: 100%;
+    margin: 0 0 -10px 65px;
+  }
+  
+  .truck3 img {
+    z-index: 1;
+    width: 100px;
+    color: #10AC84;
+    text-align: center;
+    height: 100%;
+    margin-top: -13px;
+    margin-bottom: 1px;
+    margin-left: 60px;
+  }
+  
+  .task img {
+    z-index: 1;
+    width: 70px;
+    color: #10AC84;
+    text-align: center;
+    height: 70px;
+    margin-top: 17px;
+    margin-bottom: 1px;
+    margin-left: 60px;
+  }
+  
+  .Row {
+    display: flex;
+    gap: 0 3px;
+  }
+  
+  .Totall,
+  .Availablee,
+  .Transitt,
+  .Completee {
+    display: flex;
+    min-width: 0;
+    font: 800 80px/1.21 Inter, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    margin-left: 60px;
+  }
+  
+  .Row i {
+    width: 29px;
+    min-width: 0;
+    color: #10AC84;
+    text-align: right;
+    margin: 20px 0 0 0;
+  }
+  
+  .Title {
+    display: flex;
+    justify-content: center;
+    font: 800 24px/1.2 Inter, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+  
+  .line {
+    width: 85%;
+    min-height: 4px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: left 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .flex_col5:hover + .line::after {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .flex_col5:not(:hover) + .line::after {
+    left: -100%;
+    opacity: 0;
+  }
+  
+  .flex_col5:hover .line {
+    background-color: rgb(255 255 255);
+  }
+  
+  /* Responsive styles - Tablet screens and smaller */
+  @media (max-width: 768px) {
+    .list {
+        width: 90%;
+        margin: 20px auto;
+    }
+  
+    .container {
+        width: 45%; /* 2 items per row */
+    }
+  
+    .flex_col5 {
+        width: 100%;
+        text-align: center;
+    }
+  
+    .truck1, .truck2, .truck3 img, .task img {
+        margin: 0;
+        width: 80px;
+        
+    }
+  
+    .Totall, .Availablee, .Transitt, .Completee {
+        font-size: 40px;
+        margin-left: 0;
+    }
+  
+    .Row i {
+        margin-top: 10px;
+    }
+  
+    .Title {
+        font-size: 20px;
+    }
+  
+    .line {
+        width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content_box {
+        margin: 50px 0 40px;
+    }
+  
+    .list {
+        gap: 10px;
+    }
+  
+    .container {
+        width: 48%; /* 2 items per row with small gap */
+        margin: 10px 0;
+    }
+  
+    .truck1, .truck2, .truck3 img, .task img {
+        width: 60px;
+    }
+  
+    .Totall, .Availablee, .Transitt, .Completee {
+        font-size: 30px;
+        margin-left: 0;
+    }
+  
+    .Row i {
+        margin-top: 5px;
+    }
+  
+    .Title {
+        font-size: 18px;
+    }
+  
+    .line {
+        width: 70%;
+    }
+    .task img{
+      height: 50px;
+    }
+
+    .truck1{
+        margin-left: 60px;
+    }
+    .truck2{
+        margin-left: 40px;
+    }
+    .Row{
+        margin-left: 60px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .Completee{
+        margin-top: 10px;
+    }
+    .Totall, .Transitt{
+        margin-left: 10px;
+    }
+  }
+
+  
+  
+/*fourth*/
+
+/* Default styles */
+.fourth {
+    padding-top: 80px;
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.fourth-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px; /* Add margin to avoid edges */
+}
+
+.fourth-content .feedback {
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    color: #10AC84;
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0 80px;
+}
+
+.merge3 {
+    font-size: 55px;
+}
+
+.said {
+    font-size: 55px;
+}
+
+.Btn3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 190px;
+}
+
+.Btn3 .btn-feedback {
+    background-color: #10AC84;
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 800;
+}
+
+/* Row and columns layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.col {
+    box-sizing: border-box;
+    width: 320px;
+    margin: 0 50px;
+    text-align: justify;
+}
+
+.box {
+    padding: 40px;
+    background-color: #d9d9d9;
+    border-top: 7px solid #10AC84;
+    border-radius: 10px;
+}
+
+.box i {
+    font-size: 20px;
+    font-weight: 540;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.group .ceo {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: -10px;
+}
+
+.group .ceo img {
+    margin-left: 20px;
+    height: 35px;
+    width: auto;
+}
+@media (max-width: 768px) {
+    .fourth {
+        padding-top: 40px; /* Reduced padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
+  
+    .fourth-content {
+        flex-direction: column; /* Stack the elements vertically on smaller screens */
+        align-items: flex-start; /* Align to the left for better spacing */
+        margin-left: 20px; /* Add some margin */
+    }
+  
+    .fourth-content .feedback {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-right: 0; /* Remove right margin */
+        font-size: 18px; /* Reduce font size */
+        text-align: center; /* Center text */
+    }
+  
+    .merge3 {
+        font-size: 40px; /* Reduce heading font size */
+        text-align: center; /* Center align */
+    }
+  
+    .said {
+        font-size: 30px; /* Reduce subheading font size */
+        text-align: center; /* Center align */
+    }
+  
+    .Btn3 {
+        margin-left: 0; /* Remove left margin */
+        justify-content: center; /* Center the button */
+    }
+  
+    .Btn3 .btn-feedback {
+        font-size: 20px; /* Reduce font size */
+        width: 200px; /* Adjust button width */
+        height: 60px; /* Adjust button height */
+    }
+  
+    .row {
+        margin-top: 40px; /* Adjust margin */
+    }
+  
+    .col {
+        width: 100%; /* Make columns take up full width */
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Add margin between items */
+        text-align: center; /* Center text inside columns */
+    }
+  
+    .box {
+        padding: 20px; /* Reduce padding */
+        margin-left: 0; /* Remove left margin */
+        border-radius: 8px; /* Slightly smaller border radius */
+    }
+  
+    .box i {
+        font-size: 16px; /* Reduce icon font size */
+    }
+  
+    .name {
+        font-size: 18px; /* Reduce font size */
+    }
+  
+    .group .ceo {
+        font-size: 16px; /* Reduce font size */
+        margin-top: -5px; /* Adjust margin */
+    }
+  
+    .group .ceo img {
+        height: 30px; /* Smaller image size */
+    }
+  
+    .boxbox {
+        width: 100%; /* Make box take up full width */
+        height: auto; /* Adjust height */
+        padding: 30px; /* Reduced padding */
+        margin-top: 20px; /* Add margin top */
+    }
+  
+    .Review h4 {
+        font-size: 28px; /* Reduce heading font size */
+    }
+  
+    .input-box {
+        flex-direction: column; /* Stack input fields vertically */
+    }
+  
+    .input-field {
+        width: 100%; /* Make input fields full width */
+        margin-bottom: 10px; /* Add space between inputs */
+    }
+  
+    .input-field input,
+    .input-field textarea {
+        padding: 12px; /* Increase padding for easier input on mobile */
+    }
+  
+    .boxbox button {
+        width: 100%; /* Make button full width */
+        height: 50px; /* Adjust height */
+        margin-top: 20px; /* Add margin */
+    }
+  }
+  
+  /* Further adjustments for very small screens (mobile) */
+  @media (max-width: 480px) {
+    .fourth {
+        padding-top: 20px; /* Further reduce padding */
+    }
+  
+    .merge3 {
+        font-size: 32px; /* Reduce font size even more */
+    }
+  
+    .said {
+        font-size: 24px; /* Reduce font size */
+    }
+  
+    .Btn3 .btn-feedback {
+        font-size: 18px; /* Reduce font size */
+        width: 180px; /* Adjust width */
+        height: 50px; /* Adjust height */
+    }
+  
+    .row {
+        margin-top: 30px; /* Adjust margin */
+    }
+  
+    .box {
+        padding: 15px; /* Reduce padding */
+        margin-left: 0; /* Remove left margin */
+        height: auto;
+        
+    }
+  
+    .box i {
+        font-size: 11px; /* Reduce icon font size */
+        text-align: justify;
+    }
+  
+    .name {
+        font-size: 13px; /* Reduce font size */
+        margin-bottom: 10px;
+        text-align: left;
+    }
+  
+    .group .ceo {
+        font-size: 12px; /* Reduce font size */
+        text-align: left;
+    }
+  
+    .box img{
+      margin-left: 50px;
+    }
+    .boxbox {
+        padding: 20px; /* Reduce padding */
+        margin-top: 10px; /* Reduce margin */
+    }
+  
+    .Review h4 {
+        font-size: 22px; /* Reduce heading font size */
+    }
+  
+    .input-box {
+        flex-direction: column; /* Ensure the inputs are stacked */
+    }
+  
+    .input-field input,
+    .input-field textarea {
+        padding: 14px; /* Adjust padding */
+    }
+  
+    .boxbox button {
+        width: 100%; /* Make button full width */
+        height: 50px; /* Adjust button height */
+    }
+    .row{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+    }
+    .col{
+      width: 40%;
+    }
+    .fourth{
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+    .Review{
+      margin-top: 10px;
+      width: 90%;
+      margin-left: 20px;
+    }
+    .Btn3{
+        margin-left: 90px;
+    }
+
+    .feedback{
+        margin-top: -120px;
+    }
+  }
+
+  /**/
+/* General Styles (unchanged) */
+.fifth {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.fifth-content {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.fifth-content .our-office {
+  margin-top: 70px;
+  word-spacing: 3px;
+  letter-spacing: 5px;
+  color: #10AC84;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.fifth .merge4,
+.fifth .over {
+  font-size: 60px;
+  margin-top: -3px;
+  text-align: center;
+}
+
+.des6 {
+  margin: 30px 120px 0 120px;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
+/* Map and Box container */
+.mapsph {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Box Layout */
+.jane {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.boxph {
+  padding-top: 15px;
+  background-color: #19282F;
+  margin-left: 100px;
+  border-radius: 7px;
+  height: 390px;
+  width: 330px;
+  margin-top: 60px;
+}
+
+.ph {
+  padding: 10px;
+}
+
+.ph .text10 {
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.ph .text11 {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.ph-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.add, .con, .email- {
+  color: white;
+}
+
+.ph-content .img-1,
+.ph-content .img-2,
+.ph-content .img-3 {
+  float: left;
+  margin-right: 17px;
+  margin-bottom: 35px;
+}
+
+.ph-content img {
+  height: 40px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.ph-content .img-2,
+.ph-content .img-3 img {
+  height: 35px;
+  width: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Adjusting the main container */
+  .fifth {
+      padding: 20px;
+  }
+
+  /* Center and adjust content within the fifth-content */
+  .fifth-content {
+      margin-bottom: 20px;
+  }
+
+  .fifth-content .our-office {
+      font-size: 18px; /* Adjust font size */
+      margin-top: 20px;
+  }
+
+  .fifth .merge4,
+  .fifth .over {
+      font-size: 36px; /* Reduce font size for mobile */
+  }
+
+  .des6 {
+      margin: 20px 20px;
+      font-size: 18px; /* Adjust font size */
+  }
+
+  /* Make the map and contact box stack vertically */
+  .mapsph {
+      flex-direction: column; /* Stack map and box vertically */
+      align-items: center;
+      margin-top: 30px;
+  }
+
+  /* Move .boxph above .jane */
+  .boxph {
+      order: -1; /* This moves .boxph above .jane */
+      width: 100%; /* Ensure the box takes up full width */
+      margin-left: 0; /* Remove margin-left */
+      margin-top: 15px; /* Add top margin for spacing */
+      height: auto;
+      padding: 15px;
+      box-sizing: border-box; /* Ensure padding does not overflow */
+  }
+
+  .jane iframe {
+      width: 100%;
+      height: 250px; /* Adjust iframe height for smaller screens */
+  }
+
+  /* Adjust text size for better readability */
+  .ph .text10 {
+      font-size: 24px;
+  }
+
+  .ph .text11 {
+      font-size: 16px;
+  }
+
+  /* Ensure icons and text are properly aligned */
+  .ph-content .img-1,
+  .ph-content .img-2,
+  .ph-content .img-3 {
+      margin-right: 10px;
+      margin-bottom: 20px;
+  }
+
+  .ph-content img {
+      height: 30px;
+      margin-left: 5px;
+  }
+
+  /* Text within .ph-content adjusted for readability */
+  .ph-content .text12,
+  .ph-content .text13,
+  .ph-content .text14,
+  .ph-content .text15,
+  .ph-content .text16,
+  .ph-content .text17 {
+      font-size: 16px; /* Adjust text size */
+      text-align: left; /* Align text to the left */
+  }
+
+  /* Center the box and map content */
+  .mapsph .boxph {
+      text-align: center;
+  }
+
+  /* Adjust .jane iframe */
+  .jane {
+      width: 100%; /* Ensure iframe width fits within container */
+      height: 60vh; /* Adjust height to 60% of viewport height */
+      max-height: 400px; /* Optional: set max height to prevent it from getting too large */
+      margin-top: 20px; /* Add top margin to space out iframe */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  .fifth-content .our-office {
+      font-size: 16px; /* Smaller font size for small screens */
+  }
+
+  .fifth .merge4,
+  .fifth .over {
+      font-size: 28px; /* Smaller font size for mobile */
+  }
+
+  .des6 {
+      font-size: 16px; /* Adjust font size for smaller devices */
+      margin: 15px;
+  }
+
+  .jane iframe {
+      height: 300px; /* Smaller height for iframe */
+
+  }
+
+  .ph .text10 {
+      font-size: 20px; /* Smaller heading font size */
+  }
+
+  .ph .text11 {
+      font-size: 14px; /* Smaller text */
+  }
+
+  .ph-content .img-1,
+  .ph-content .img-2,
+  .ph-content .img-3 {
+      height: 25px; /* Smaller icon size */
+  }
+
+  .ph-content img {
+      height: 25px; /* Smaller icons */
+      margin-top: 5px;
+  }
+
+  .ph-content .text12,
+  .ph-content .text13,
+  .ph-content .text14,
+  .ph-content .text15,
+  .ph-content .text16,
+  .ph-content .text17 {
+      font-size: 14px; /* Smaller text for mobile */
+      text-align: left;
+  }
+
+  /* Adjust boxph margin for small screens */
+  .boxph {
+      width: 100%; /* Take up more space */
+      padding: 12px;
+      margin-top: 15px;
+      order: -1; /* Ensure boxph stays above .jane */
+  }
+
+  /* Ensure .jane maintains proper width and height */
+  .jane {
+      width: 100%; /* Ensure iframe width fits container */
+      height: 60vh; /* Adjust height to 50% of viewport height */
+      max-height: 300px; /* Optional: set max height for small screens */
+      margin-bottom: 20px;
+
+  }
+
+ .fifth{
+  margin-bottom: 30px;
+ }
+}
+
+
+
+  /*footer*/
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    width: auto;
+    padding: 10px 20px 10px 20px;
+    background-color: #19282f;
+  }
+  
+  .leftColumn,
+  .middleColumn,
+  .rightColumn {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .leftColumn {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    margin: 10px 10px 10px;
+    width: 370px;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footerlogo {
+    width: 257px;
+  }
+  
+  .footerlorem {
+    margin: -20px 0 0 3px;
+    font-size: 17px;
+    color: #fff;
+  }
+  
+  .f-i-t_image {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    margin: 10px 0 0 50px;
+    width: 257px;
+  }
+  
+  .f-i-t_image i {
+    margin: 2px 0 0;
+    width: 50px;
+    height: 50px;
+    min-width: 0;
+    background-color: #10AC84;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .f-i-t_image i {
+    line-height: 50px;
+  }
+  
+  .middleColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 3px;
+    width: 280px;
+  }
+  
+  .support {
+    z-index: 1;
+    width: 80.71%;
+    font: 700 25px/1.44 Jost, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+  
+  .serviceItem,
+  .faqItem,
+  .contactItem,
+  .termsItem,
+  .privacyItem {
+    display: flex;
+    gap: 0 20px;
+    margin: 15px 0;
+    width: 100%;
+  }
+  
+  .middleColumn i {
+    z-index: 1;
+    margin: 10px 0 20px 30px;
+    min-width: 0;
+  }
+  
+  .serviceText, .faqText, .contactText,
+  .termsText, .privacyText {
+    min-width: 0;
+    font-size: 20px;
+    color: rgb(255 255 255);
+  }
+  
+  .rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    width: 345px;
+  }
+  
+  .contactTitle {
+    z-index: 3;
+    width: 65.8%;
+    font: 700 25px/1.44 Jost, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+  
+  .addressBlock, .phoneBlock, .emailBlock {
+    display: flex;
+    gap: 0 18px;
+    margin: 20px 0 0;
+    width: 100%;
+  }
+  
+  .addressIcon {
+    z-index: 1;
+    margin: 18px 0 30px;
+    width: 40px;
+  }
+  
+  .phoneIcon {
+    z-index: 1;
+    margin: 8px 0;
+    width: 35px;
+  }
+  
+  .emailIcon {
+    z-index: 1;
+    margin: 7px 0;
+    width: 32px;
+  }
+  
+  .addressDetails, .phoneDetails, .emailDetails {
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+  }
+  
+  .addressText, .phoneNumber, .emailAddress {
+    font: 400 15px/1.45 Jost, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    /* Adjust grid layout for smaller screens */
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .rightColumn {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Adjust grid layout for very small screens */
+    .gridContainer {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .support {
+      font-size: 20px;
+    }
+
+    .gridItem p {
+      font-size: 14px;
+    }
+
+    .rightColumn {
+      margin-top: 18px;
+   
+    }
+    .footerlorem{
+    font-size: 12px;
+    margin-left: -25px;
+    padding: 30px;
+    }
+    .footer{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .middleColumn i{
+      margin-right: 25px;
+      margin-left: 40px;
+    }
+
+   .serviceText, .faqText, .contactText, .termsText, .privacyItem{
+    font-size: 17px;
+   }
+
+   .contactTitle{
+    margin-left: -7px;
+   }
+   .support{
+    margin-left: 50px;
+   }
+
+
+    .addressIcon, .phoneIcon, .emailIcon{
+      margin-left: 30px;
+      margin-right: -35px;
+    }
+  }

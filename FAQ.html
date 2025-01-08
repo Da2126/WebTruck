@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="../css/FAQ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+    <img src="../images/hauler.png" alt="Logo" class="logo">
+    <nav>
+        <div class="nav-container">
+            <ul class="navlinks">
+                <li class="items"><a href="../html/homepage.html">Home</a></li>
+                <li class="items">
+                    <a href="../html/Service.html" onclick="toggleDropdown(event, 'dropdownServices')">Services</a>
+                </li>
+                <li class="items">
+                    <a href="#" onclick="toggleDropdown(event, 'dropdownPage')">Page</a>
+                    <img style="margin-bottom: -5px; margin-left: 2px;" width="20px" height="20px" src="../images/down.png" alt="" onclick="toggleDropdown(event, 'dropdownPage')">
+                    <ul class="dropdown" id="dropdownPage">
+                        <li><a href="../html/Feedback.html">Feedback</a></li>
+                        <li><a href="../html/Team.html">Our Team</a></li>
+                        <li><a href="../html/FAQ.html">FAQs</a></li>
+                    </ul>
+                </li>
+                <li class="items"><a href="../html/AboutUs.html">About Us</a></li>
+                <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+         <a href="../html/ContactUs.html"><button class="contact-button"><img src="../images/call.png" alt="call"><span class="contact">Contact Us</span></button></a>
+        </div>
+        <ul class="sidebar">
+            <li onclick="closeSidebar()" style="margin-top: 10px;"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+            <li><a href="./homepage.html">Home</a></li>
+            <li><a href="./Service.html">Services</a></li>
+            <li><a href="../html/Feedback.html">Feedback</a></li>
+            <li><a href="../html/Team.html">Our Team</a></li>
+            <li><a href="../html/FAQ.html">FAQs</a></li>
+            <li><a href="../html/AboutUs.html">About Us</a></li>
+            <li>  <a href="../html/ContactUs.html"><button class="contact-button"><img src="../images/call.png" alt="call"><span class="contact">Contact Us</span></button></a></li> <!-- Changed to list item -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="background">
+        
+        <div class="title">
+            <div class="merge-title1">
+                <span class="title-3" style="color:#10AC84;"> FAQs</span>
+            </div> 
+            <div class="merge-title2">
+                <span class="title-4" style="color: #10AC84; ">Home</span>
+                <span class="title-5" style="color:white;"> / FAQs</span>
+            </div> 
+        </div>
+    </div>
+
+    <div class="Faqs" style="background-color: white; height: 1600px;" >
+          <div class="titles">
+            <h2 class="title1" style="color: black;">Frequently Asked</h2>
+            <h2 class="title2" style="color: #10AC84;">Questions</h2>
+            <span class="lor">
+              Efficient transport starts with the right tools. Our system is here to streamline your operations and ensure smooth, secure fleet management.
+            </span>
+          </div>
+
+          <div class="num">
+            <div class="o">
+              <h2>1. What is the Aggregate Transport Truck Management System?</h2>
+              <p>Our system is designed to help businesses manage their fleet of trucks efficiently. It allows for streamlined scheduling, GPS tracking, and vehicle attendance tracking, all tailored to meet the unique needs of aggregate transport operations.</p>
+            </div>
+            <div class="o">
+              <h2>2. How does GPS tracking work in the system?</h2>
+              <p>Our system uses GPS devices that send location data (latitude and longitude) every 30 seconds to help track vehicles' approximate locations within an operational area. This helps optimize routing and scheduling without real-time monitoring.</p>
+            </div>
+            <div class="o">
+              <h2>3. What kind of data does the system collect?</h2>
+              <p>We collect business-related information, vehicle details, and location data sent by GPS trackers. Additionally, RFID technology is used for attendance tracking to ensure secure vehicle access and operations.</p>
+            </div>
+            <div class="o">
+              <h2>4. Is the GPS tracking data in real-time?</h2>
+              <p>No, our GPS system sends location data every 30 seconds, providing periodic updates, not real-time tracking.</p>
+            </div>
+            <div class="o">
+              <h2>5. How secure is the data in the system?</h2>
+              <p>We take data security very seriously. All collected information is securely stored using encryption and strict access controls. Only authorized personnel from your company and ours can access the data.</p>
+            </div>
+            <div class="o">
+              <h2>6. How long is the data stored?</h2>
+              <p>Data is retained as long as necessary for operational and legal purposes. We ensure that data is only kept for as long as it is useful for transport management.</p>
+            </div>
+            <div class="o">
+              <h2>7. Can I access the data anytime?</h2>
+              <p>Yes, you can access your vehicle and operational data at any time through our secure system portal. Access is limited to authorized users.</p>
+            </div>
+            <div class="o">
+              <h2>8. How does RFID tracking work in the system?</h2>
+              <p>RFID technology is used to track vehicle attendance. It ensures that vehicles are correctly checked in and out of operational areas, enhancing security and accountability.</p>
+            </div>
+            <div class="o">
+              <h2>9. Do I need to install any additional hardware?</h2>
+              <p>The system requires GPS tracking devices and RFID tags, which will be installed on the vehicles and required access points. These devices are part of the setup to ensure smooth operation.</p>
+            </div>
+            <div class="o">
+              <h2>10. How can I get support if I have an issue?</h2>
+              <p>If you encounter any issues or have questions, our support team is available to assist you. Please contact us through our support page or via the provided contact details on the website.</p>
+            </div>
+            
+          </div>
+      
+    </div>
+
+    
+    <footer class="footer">
+      <div class="leftColumn">
+        <div class="footer-left">
+          <img class="footerlogo" alt="text" src="../images/hauler.png"/>
+          <p class="footerlorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis vitae sem non bibendum. Aliquam a auctor ante. Sed euismod gravida sagittis.</p>
+        </div>
+        <div class="f-i-t_image">
+          <i class="fa-brands fa-facebook-f fa-2xl" style="color: white;"></i>
+          <i class="fa-brands fa-instagram fa-2xl" style="color: white;"></i>
+          <i class="fa-brands fa-twitter fa-2xl" style="color: white;"></i>
+        </div>
+      </div>
+      
+      <div class="middleColumn">
+        <p class="support">Our Support</p>
+        <div class="serviceItem">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+          <a href=""><p class="serviceText">Services</p></a>
+        </div>
+        <div class="faqItem">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+          <a href="../html/FAQ.html"><p class="faqText">FAQs</p></a>
+        </div>
+        <div class="contactItem">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+          <a href="../html/ContactUs.html"><p class="contactText">Contact</p></a>
+        </div>
+        <div class="termsItem">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+          <a href="../html/Term&Con.html"><p class="termsText">Term & Conditions</p></a>
+        </div>
+        <div class="privacyItem">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #10AC84;"></i>
+          <a href="../html/Privacy.html"><p class="privacyText">Privacy Policy</p></a>
+        </div>
+      </div>
+      
+      <div class="rightColumn">
+        <p class="contactTitle">Contact #</p>
+        <div class="addressBlock">
+          <img alt="h" class="addressIcon" src="../images/address.png" />
+          <div class="addressDetails">
+            <h3 class="addressLabel" style="color: white;">Address</h3>
+            <p class="addressText">
+              99 Roving St., Big City,
+              <br />
+              BGC 234565
+            </p>
+          </div>
+        </div>
+        <div class="phoneBlock">
+          <img class="phoneIcon" alt="text" src="../images/phone.png" />
+          <div class="phoneDetails">
+            <h3 class="phoneLabel" style="color: white;">Phone Number</h3>
+            <p class="phoneNumber">123-234-1234</p>
+          </div>
+        </div>
+        <div class="emailBlock">
+          <img class="emailIcon" alt="text" src="../images/mail.png"/>
+          <div class="emailDetails">
+            <h3 class="emailLabel" style="color: white;">Email Address</h3>
+            <p class="emailAddress">haulerhorizon@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/script.js" > </script>
+</body>
+</html>
