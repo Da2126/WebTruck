@@ -5,6 +5,11 @@
     margin: 0;
 }
 
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;         /* Ensure the width is constrained */
+}
+
 .logo {
     position: absolute;
     left: 50px;
