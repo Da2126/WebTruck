@@ -4,6 +4,10 @@
     padding: 0;
     margin: 0;
 }
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;         /* Ensure the width is constrained */
+}
 
 .logo {
     position: absolute;
