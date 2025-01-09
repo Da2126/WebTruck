@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log(formData);  // Log the data being sent
 
-        axios.post('http://localhost:3000/submit-contact', formData)
+        axios.post('https://web-server-d080.onrender.com/submit-contact', formData)
             .then(response => {
                 console.log('Success:', response.data);
                 document.getElementById('responseMessage').textContent = response.data.message;
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to fetch the total count of trucks
 async function fetchTotalTruckCount() {
     try {
-        const response = await fetch('http://localhost:3000/trucks/count');
+        const response = await fetch('https://web-server-d080.onrender.com/trucks/count');
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status}`);
         }
@@ -99,7 +99,7 @@ async function fetchTotalTruckCount() {
 // Function to fetch the count of available trucks (status = 0)
 async function fetchAvailableTruckCount() {
     try {
-        const response = await fetch('http://localhost:3000/trucks/available/count');
+        const response = await fetch('https://web-server-d080.onrender.com/trucks/available/count');
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status}`);
         }
@@ -114,7 +114,7 @@ async function fetchAvailableTruckCount() {
 // Function to fetch the count of trucks in transit (status = 1)
 async function fetchTrucksInTransitCount() {
     try {
-        const response = await fetch('http://localhost:3000/trucks/in-transit/count');
+        const response = await fetch('https://web-server-d080.onrender.com/trucks/in-transit/count');
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status}`);
         }
@@ -138,7 +138,7 @@ window.onload = function() {
 
 async function fetchCompleteTaskCount() {
     try {
-      const response = await fetch('http://localhost:3000/api/completed-tasks/count');
+      const response = await fetch('https://web-server-d080.onrender.com/api/completed-tasks/count');
       if (!response.ok) throw new Error('Network response was not ok');
       
       const data = await response.json();
